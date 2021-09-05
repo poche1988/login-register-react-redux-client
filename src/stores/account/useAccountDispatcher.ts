@@ -1,12 +1,17 @@
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
-import { RouteComponentProps } from 'react-router'
+import { useHistory } from 'react-router'
 import IUser from '../../models/users/IUser'
 import { SET_LOGGED_IN_USER } from './types'
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const useAccountDispatcher = ({ history }: RouteComponentProps) => {
+interface IActions {
+  Login: (user: IUser) => void
+  Logout: () => void
+}
+
+const useAccountDispatcher = (): IActions => {
   const dispatch = useDispatch()
+  const history = useHistory()
 
   const actions = useMemo(
     () => ({
@@ -15,7 +20,7 @@ const useAccountDispatcher = ({ history }: RouteComponentProps) => {
         if (user.token) window.localStorage.setItem('jwt', user.token)
         if (user.displayName)
           window.localStorage.setItem('loggedInUser', user.displayName)
-        history.push(`/Pets`)
+        history.push(`/Home`)
       },
       Logout() {
         dispatch({ type: SET_LOGGED_IN_USER, payload: null })

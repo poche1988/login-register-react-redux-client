@@ -4,12 +4,11 @@ import { Button, Label } from 'semantic-ui-react'
 import accountRepository from '../../../app/api/repositories/accountRepository'
 import MyTextInput from '../shared/form/MyTextInput'
 import IUserForm from '../../../models/users/IUserForm'
-import { RouteComponentProps } from 'react-router'
 import useAccountDispatcher from '../../../stores/account/useAccountDispatcher'
 import * as Yup from 'yup'
 
-const LoginForm = (props: RouteComponentProps): JSX.Element => {
-  const { Login } = useAccountDispatcher(props)
+const LoginForm = (): JSX.Element => {
+  const { Login } = useAccountDispatcher()
 
   const handleLogin = async (creds: IUserForm) => {
     try {

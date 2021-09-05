@@ -1,17 +1,9 @@
 import { useSelector } from 'react-redux'
 import { RootState } from '../../stores/index'
 
-interface IReturn {
-  isAuthenticated: () => boolean
-}
-
-const useAuthentication = (): IReturn => {
+const useAuthentication = (): boolean => {
   const user = useSelector((state: RootState) => state.loggedInUser)
-  const isAuthenticated = (): boolean => {
-    return user?.token ? true : false
-  }
-
-  return { isAuthenticated }
+  return user?.token !== null && user?.token !== undefined
 }
 
 export default useAuthentication
