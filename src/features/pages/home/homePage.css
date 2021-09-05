@@ -1,0 +1,25 @@
+.modal {
+    position: relative;
+    top: 50px;
+    background-color: white;
+    padding: 30px 15px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  .modal-verlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(135deg, rgb(24,42,115) 0%, rgb(33,138,174) 69%, rgb(32,167,172) 89%);
+  }
+
+  .modal .close-modal{
+      position: absolute;
+      top:5px;
+      right: 5px;
+      cursor: pointer;
+  }
