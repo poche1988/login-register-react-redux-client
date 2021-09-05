@@ -6,7 +6,7 @@ import { Redirect, Route } from 'react-router-dom'
 import { RootState } from '../../stores/index'
 
 const PrivateRoute = ({ component, ...rest }: any): JSX.Element => {
-  const user = useSelector((state: RootState) => state.account.loggedInUser)
+  const user = useSelector((state: RootState) => state.loggedInUser)
 
   const routeComponent = (props: any) =>
     user?.token ? (

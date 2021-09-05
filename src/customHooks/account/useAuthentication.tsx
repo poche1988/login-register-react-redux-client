@@ -6,7 +6,7 @@ interface IReturn {
 }
 
 const useAuthentication = (): IReturn => {
-  const user = useSelector((state: RootState) => state.account.loggedInUser)
+  const user = useSelector((state: RootState) => state.loggedInUser)
   const isAuthenticated = (): boolean => {
     return user?.token ? true : false
   }
