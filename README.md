@@ -1,9 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
+# Introduction 
+React App to register and login consuming NET Core API  
+API repo : https://github.com/poche1988/login-register-netcore-api  
