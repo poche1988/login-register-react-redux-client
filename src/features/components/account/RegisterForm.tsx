@@ -22,7 +22,6 @@ const RegisterForm = (): JSX.Element => {
 
   const DisplayingErrorMessagesSchema = Yup.object().shape({
     displayName: Yup.string().required('Required'),
-    username: Yup.string().required('Required'),
     password: Yup.string()
       .required('Required')
       .matches(
@@ -38,7 +37,6 @@ const RegisterForm = (): JSX.Element => {
         email: '',
         password: '',
         displayName: '',
-        username: '',
         error: null,
       }}
       validationSchema={DisplayingErrorMessagesSchema}
@@ -49,12 +47,7 @@ const RegisterForm = (): JSX.Element => {
             setErrors({
               email: 'This Email already exist. Login to your account.',
             })
-          else if (errorMsg === 'Username taken') {
-            setErrors({
-              username:
-                'This Username already exist. Please choose a different one.',
-            })
-          } else {
+          else {
             setErrors({
               error:
                 'Sorry. Something went wrong. Your account was not created.',
@@ -69,11 +62,6 @@ const RegisterForm = (): JSX.Element => {
             label="Full Name"
             name="displayName"
             placeholder="Full Name"
-          />
-          <MyTextInput
-            label="Username"
-            name="username"
-            placeholder="username"
           />
           <MyTextInput label="Email" name="email" placeholder="Email" />
           <MyTextInput
