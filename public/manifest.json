@@ -1,6 +1,6 @@
 {
-  "short_name": "MPC",
-  "name": "My Pet Calendar",
+  "short_name": "LRRC",
+  "name": "Login-Register React-Net Core",
   "icons": [
     {
       "src": "favicon.ico",
