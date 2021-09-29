@@ -8,3 +8,4 @@ Redux
 Typescript  
 Formik  
 Yup  
+Semantic UI
