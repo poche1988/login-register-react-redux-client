@@ -4,12 +4,12 @@ import { Container } from 'semantic-ui-react'
 import { Route, withRouter } from 'react-router-dom'
 import HomePage from '../../features/pages/home/HomePage'
 import PrivateRoute from './PrivateRoute'
-import Login from '../../features/pages/login/Login'
+import LoginRegister from '../../features/pages/loginRegister/LoginRegister'
 
 const App = (): JSX.Element => {
   return (
     <>
-      <Route exact path="/" component={Login} />
+      <Route exact path="/" component={LoginRegister} />
 
       <Route
         path={'/(.+)'}

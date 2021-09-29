@@ -3,7 +3,7 @@ import { Divider, Grid, Segment } from 'semantic-ui-react'
 import LoginForm from '../../components/account/LoginForm'
 import RegisterForm from '../../components/account/RegisterForm'
 
-const Login = (): JSX.Element => {
+const LoginRegister = (): JSX.Element => {
   return (
     <Segment placeholder>
       <Grid columns={2} relaxed="very" stackable>
@@ -21,4 +21,4 @@ const Login = (): JSX.Element => {
   )
 }
 
-export default Login
+export default LoginRegister

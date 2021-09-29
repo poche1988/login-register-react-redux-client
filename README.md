@@ -9,3 +9,5 @@ Typescript
 Formik  
 Yup  
 Semantic UI
+
+![Screenshot](./public/loginregister.JPG)

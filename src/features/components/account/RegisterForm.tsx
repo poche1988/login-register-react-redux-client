@@ -1,6 +1,6 @@
 import { ErrorMessage, Form, Formik } from 'formik'
 import React from 'react'
-import { Button, Label } from 'semantic-ui-react'
+import { Button, Header, Label } from 'semantic-ui-react'
 import accountRepository from '../../../app/api/repositories/accountRepository'
 import MyTextInput from '../shared/form/MyTextInput'
 import IUserForm from '../../../models/users/IUserForm'
@@ -58,6 +58,7 @@ const RegisterForm = (): JSX.Element => {
     >
       {({ handleSubmit, errors }) => (
         <Form className="ui form" onSubmit={handleSubmit} autoComplete="off">
+          <Header textAlign="center">Register</Header>
           <MyTextInput
             label="Full Name"
             name="displayName"
